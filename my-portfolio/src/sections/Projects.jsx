@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiArrowUpRight } from "react-icons/fi";
 import edubridge from "../assets/images/edubridge.png";
-import personalPortfolio from "../assets/images/personalPortfolio.png";
+import personalPortfolio from "../assets/images/PersonalPortfolio.png";
 import portfoliogenerator from "../assets/images/portfoliogenerator.png";
 import sprinkler from "../assets/images/sprinkler.png"
 
