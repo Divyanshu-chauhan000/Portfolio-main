@@ -15,7 +15,7 @@ const Hero = () => {
         {/* Left-side content */}
     <div className='text-center md:text-left order-2 md:order-1'>
       <p className='text-xs sm:text-sm text-gray-200 mb-2'>Hi, I am <span className='font-bold'>Divyanshu</span></p>
-      <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-700 animate-pulse bg-clip-text text-transparent'>Frontend Developer </h1>
+      <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-700 animate-pulse bg-clip-text text-transparent'>Full Stack Developer </h1>
       <span className='text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-gray-200 font-bold leading-tight mb-6 block'>building modern web Experiences</span>
       <p className='text-gray-400 mb-6 sm:mb-8 mt-4 max-w-lg mx-auto md:mx-0 text-sm sm:text-base'> I specialize in React.js and modern UI development, creating fast, responsive and user-friendly web applications.</p>
    
