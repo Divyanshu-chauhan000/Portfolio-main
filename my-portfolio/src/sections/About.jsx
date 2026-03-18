@@ -40,10 +40,10 @@ const About = () => {
           {/* Right content -----> */}  
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 mt-8 md:mt-0">
                {
-               ["React.js",
-               "Tailwind CSS",
-               "JavaScript",
-               "HTML & CSS ",
+               ["JavaScript",
+               "React.js",
+               "Node.js",
+               "MongoDB", 
                "Git & Github", 
                "Responsive UI",
               ].map((skill,index) => (

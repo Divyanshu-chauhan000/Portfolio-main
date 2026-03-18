@@ -1,27 +1,28 @@
 import React from 'react'
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { FaNodeJs } from "react-icons/fa";
 import {  SiC, SiCplusplus } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 const skills = [
   {
-    tech:"HTML",
-    icon: <FaHtml5/> ,
-  },
-  {
-    tech:"CSS",
-    icon: <FaCss3Alt/> ,
-  },
-  {
     tech:"JavaScript",
-    icon: <FaGithub/> ,
+    icon: <IoLogoJavascript />,
   },
   {
     tech:"React.Js",
     icon: <FaReact/> ,
+  },
+  {
+    tech:"Node.Js",
+    icon: <FaNodeJs /> ,
+  },
+  {
+    tech:"MongoDB",
+    icon: <SiMongodb />,
   },
   {
     tech:"C++",
