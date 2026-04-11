@@ -40,13 +40,13 @@ const About = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-             {/* <NavLink to="/resume">
+             <NavLink to="/resume">
                <button
                 className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base text-center"
               >
                 Download Resume
               </button>
-             </NavLink> */}
+             </NavLink>
               <NavLink to="/projects">
                 <button
                
