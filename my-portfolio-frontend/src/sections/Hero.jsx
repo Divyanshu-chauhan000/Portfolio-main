@@ -1,5 +1,6 @@
 import React from 'react'
 import myPic from '../assets/images/myPic.jpeg'
+import { NavLink } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
@@ -14,15 +15,20 @@ const Hero = () => {
     <div className='max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-8 md:py-0'>
         {/* Left-side content */}
     <div className='text-center md:text-left order-2 md:order-1'>
-      <p className='text-xs sm:text-sm text-gray-200 mb-2'>Hi, I am <span className='font-bold'>Divyanshu</span></p>
-      <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-700 animate-pulse bg-clip-text text-transparent'>Full Stack Developer </h1>
-      <span className='text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-gray-200 font-bold leading-tight mb-6 block'>building modern web Experiences</span>
-      <p className='text-gray-400 mb-6 sm:mb-8 mt-4 max-w-lg mx-auto md:mx-0 text-sm sm:text-base'> I specialize in React.js and modern UI development, creating fast, responsive and user-friendly web applications.</p>
+      <p className='text-xs sm:text-sm text-gray-200 mb-2'>Hi, I'm <span className='font-bold'>Divyanshu Chauhan</span></p>
+      <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-700 animate-pulse bg-clip-text text-transparent'>MERN Stack Developer</h1>
+      <span className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-200 font-bold leading-tight mb-6 block mt-1'>building modern web & app Experiences</span>
+      <p className='text-gray-400 mb-6 sm:mb-8 mt-4 max-w-lg mx-auto md:mx-0 text-sm sm:text-base'>I build scalable web applications and cross-platform mobile apps with clean architecture and modern technologies.
+I also integrate AI-powered features into applications to enhance user experience and functionality..</p>
    
     {/*  Buttons --> Action  */}
     <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start'>
-      <button className='px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base'>View Projects</button>
-      <button className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-gray-900 border bg-gray-200 font-medium hover:bg-black hover:text-gray-200 transition text-sm sm:text-base">Contact Me</button>
+      <NavLink to="/projects">
+        <button className='px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base'>View Projects</button>
+      </NavLink>
+      <NavLink to="/contact">
+        <button className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-gray-900 border bg-gray-200 font-medium hover:bg-black hover:text-gray-200 transition text-sm sm:text-base">Contact Me</button>
+      </NavLink>
     </div>
 
     {/* Social media icons ---> */}

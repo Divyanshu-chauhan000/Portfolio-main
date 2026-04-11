@@ -18,23 +18,20 @@ const About = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-200 mb-4 sm:mb-6 leading-tight">
               Crafting modern <br /> <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">web experiences</span>
             </h2>
-            <p className="text-gray-600 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
-              I'm a Web Developer and B.Tech CSE student who loves building
-              clean, responsive, and engaging web applications. I specialize
-              in creating scalable user interfaces using React.js and
-              Tailwind CSS.
+            <p className="text-gray-500 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
+              I am a MERN Stack Developer with experience in building full-stack web applications and cross-platform mobile apps using React Native.
             </p>
-            <p className="text-gray-600 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
-              I focus on transforming ideas into smooth digital experiences
-              with attention to performance, accessibility, and visual
-              consistency. I'm actively looking for web developer internship
-              or entry-level roles to grow and contribute to real-world
-              products.
+            <p className="text-gray-500 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
+             I focus on writing clean, maintainable code and building scalable backend systems with efficient APIs.
+Along with web and mobile development, I have experience integrating AI-based features into applications, making them smarter and more interactive.
+            </p>
+            <p className="text-gray-500 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">
+              I am continuously learning and improving my skills to build real-world, production-ready applications.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                   <a href="/resume.pdf" className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base text-center">Download Resume</a>
-                   <a href="#projects" className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl border bg-gray-200 font-medium hover:bg-black hover:text-gray-200 transition text-sm sm:text-base text-center">View Projects</a>
+                   <a href="/resume" className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base text-center">Download Resume</a>
+                   <a href="/projects" className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl border text-gray-800 bg-gray-200 font-medium hover:bg-black hover:text-gray-200 transition text-sm sm:text-base text-center">View Projects</a>
             </div>
           </div>
           {/* Right content -----> */}  
@@ -44,14 +41,15 @@ const About = () => {
                "React.js",
                "Node.js",
                "MongoDB", 
+               "React Native",
                "Git & Github", 
-               "Responsive UI",
+              
               ].map((skill,index) => (
                 <div key={index} className="group p-3 sm:p-5 rounded-2xl bg-white border shadow-sm hover:shadow-lg transition">
                       <div className="text-gray-900 font-semibold mb-1 group hover:text-purple-600 transition text-sm sm:text-base">{skill}</div>
-                      <div className="h-1 w-8 sm:w-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+                      <div className="h-1 w-12 sm:w-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
                 </div>
-               ))};
+               ))}
           </div>
          </div>
       </div>
