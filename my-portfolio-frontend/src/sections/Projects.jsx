@@ -46,7 +46,7 @@ const projects = [
     description:
       "My personal portfolio website showcasing projects and skills, built using React.js and Tailwind CSS with a modern design.",
     tech: ["React.js", "Tailwind CSS"],
-    LiveDemo: "https://portfolio-main-vt9w.vercel.app/",
+    LiveDemo: "https://portfolio-main-vt9w-quhzyxba5.vercel.app/",
     Github : "https://github.com/Divyanshu-chauhan000/Portfolio-main/tree/main/my-portfolio",
     image: personalPortfolio,
   },
