@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
-
 const navItems = [
   { name: "Home", to: "/" },
   { name: "About", to: "/about" },
@@ -61,16 +60,18 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2 sm:gap-4">
             <NavLink to="/resume">
-              <button  className="hidden sm:block text-gray-200 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-gray-600 hover:border-cyan-400 hover:text-white hover:shadow-cyan-500/20 transition-all">
-              Resume
-            </button>
+              <button className="hidden sm:block text-gray-200 px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-gray-600 hover:border-cyan-400 hover:text-white hover:shadow-cyan-500/20 transition-all">
+                Resume
+              </button>
             </NavLink>
-            <button
-              className="md:hidden text-gray-200 text-2xl p-2"
-              onClick={toggleMenu}
-            >
-              {isMenuOpen ? <HiX /> : <HiMenu />}
-            </button>
+            {!isMenuOpen && (
+              <button
+                className="md:hidden text-gray-200 text-2xl p-2"
+                onClick={toggleMenu}
+              >
+                <HiMenu />
+              </button>
+            )}
           </div>
         </div>
       </nav>
