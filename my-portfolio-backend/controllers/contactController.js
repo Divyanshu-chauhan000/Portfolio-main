@@ -1,28 +1,33 @@
 const handlebars = require("handlebars");
 const fs = require("fs");
 const path = require("path");
-const sgMail = require("@sendgrid/mail");
+const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
+  },
+});
 
 async function sendMail(name, email, message) {
   const subject = "Mail Regarding Feedback";
-  const from = process.env.EMAIL || "noreply@portfolio.com";
   const to = process.env.EMAIL;
   const templatePath = path.join(__dirname, "..", "templates/", "feedback.hbs");
   const template = handlebars.compile(fs.readFileSync(templatePath, "utf8"));
   const html = template({ name: name, message: message, email });
 
-  const msg = {
+  const mailOptions = {
+    from: process.env.GMAIL_USER,
     to,
-    from,
     replyTo: email,
     subject,
     html,
   };
 
-  await sgMail.send(msg);
+  await transporter.sendMail(mailOptions);
 }
 
 const postContactDetails = async (req, res) => {
