@@ -20,32 +20,23 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-12 sm:py-16 md:py-20 bg-black relative">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none"></div>
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="skills" className="py-16 md:py-20 bg-black">
+      <div className="max-w-6xl mx-auto px-5 md:px-6">
         {/* Heading */}
-        <div className="text-center mb-12 sm:mb-14">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
-            My Skills
-          </h2>
-          <p className="text-gray-400 text-sm sm:text-base">
-            Technologies I work with
-          </p>
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-3">Skills</h2>
+          <p className="text-gray-500 text-[14px] md:text-base">Technologies I use regularly</p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="group bg-[#020617] border border-gray-800 rounded-xl py-5 sm:py-6 px-4 flex flex-col items-center justify-center gap-3 hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 cursor-default"
-            >
-              <span className={`text-3xl sm:text-4xl ${skill.color}`}>
+            <div key={index}
+              className="bg-gray-900 border border-gray-800 rounded-lg py-5 px-3 flex flex-col items-center gap-2 hover:border-cyan-500/40 transition cursor-default">
+              <span className={`text-2xl md:text-3xl ${skill.color}`}>
                 {skill.icon}
               </span>
-              <span className="font-medium text-gray-300 text-sm sm:text-base">
+              <span className="text-gray-300 text-[13px] md:text-[14px] font-medium">
                 {skill.tech}
               </span>
             </div>
