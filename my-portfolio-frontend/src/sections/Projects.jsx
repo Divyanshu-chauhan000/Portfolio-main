@@ -58,7 +58,7 @@ const appProjects = [
     description:
       "A full-stack recipe application with a complete backend system where users can create recipes, explore recipes from others, and add reviews/ratings. It includes authentication, database integration, and real-time data handling.",
     tech: ["React Native", "Node.js", "Express.js", "MongoDB", "JWT"],
-    APk: "https://expo.dev/accounts/dev_code001/projects/frontend/builds/4c4a8fab-1087-4415-b7bb-82e40ee887d7",
+    APK: "https://expo.dev/accounts/dev_code001/projects/frontend/builds/4c4a8fab-1087-4415-b7bb-82e40ee887d7",
     Github : "https://github.com/Divyanshu-chauhan000/RecipeApp",
     image: recipeApp,
   },
