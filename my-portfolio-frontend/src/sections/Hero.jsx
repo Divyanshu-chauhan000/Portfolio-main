@@ -8,52 +8,57 @@ import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    // Section wrapper
     <section id='home' className='min-h-screen pt-[70px] bg-black text-white flex items-center'>
-    
-   {/* center container */}
-    <div className='max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-8 md:py-0'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-8 md:py-0'>
         {/* Left-side content */}
-    <div className='text-center md:text-left order-2 md:order-1'>
-      <p className='text-xs sm:text-sm text-gray-200 mb-2'>Hi, I'm <span className='font-bold'>Divyanshu Chauhan</span></p>
-      <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-700 animate-pulse bg-clip-text text-transparent'>MERN Stack Developer</h1>
-      <span className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-200 font-bold leading-tight mb-6 block mt-1'>building modern web & app Experiences</span>
-      <p className='text-gray-400 mb-6 sm:mb-8 mt-4 max-w-lg mx-auto md:mx-0 text-sm sm:text-base'>I build scalable web applications and cross-platform mobile apps with clean architecture and modern technologies.
-I also integrate AI-powered features into applications to enhance user experience and functionality..</p>
-   
-    {/*  Buttons --> Action  */}
-    <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start'>
-      <NavLink to="/projects">
-        <button className='px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-[#0202617] border border-gray-800 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:translate-y-1 hover:border-cyan-400 transition text-sm sm:text-base'>View Projects</button>
-      </NavLink>
-      <NavLink to="/contact">
-        <button className="px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-gray-900 border bg-gray-200 font-medium hover:bg-black hover:text-gray-200 transition text-sm sm:text-base">Contact Me</button>
-      </NavLink>
-    </div>
+        <div className='text-center md:text-left order-2 md:order-1'>
+          <p className='text-sm text-gray-400 mb-3'>Hi, I'm</p>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-2'>
+            Divyanshu <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>Chauhan</span>
+          </h1>
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium mb-6'>MERN Stack Developer</p>
+          <p className='text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-sm sm:text-base leading-relaxed'>
+            Building scalable web applications and cross-platform mobile apps with clean architecture and modern technologies. Integrating AI-powered features to enhance user experience.
+          </p>
 
-    {/* Social media icons ---> */}
-    <div className='flex gap-4 mt-6 sm:mt-8 text-xl justify-center md:justify-start'>
-      <a href="" className='hover:bg-green-400 rounded-full p-1 transition duration-300'><FaWhatsapp/></a>
-      <a href="" className='hover:bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-full p-1 transition duration-300'><FaInstagram/></a>
-      <a href="" className='hover:bg-[#0a66c2] rounded-full p-1 transition duration-300'><CiLinkedin/></a>
-      <a href="" className='hover:bg-[#2b3137] rounded-full p-1 transition duration-300'><FaGithub/></a>
-    </div>
-    </div>
+          {/* Buttons */}
+          <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start'>
+            <NavLink to="/projects">
+              <button className='px-6 sm:px-8 py-3 rounded-xl bg-[#020617] border border-gray-700 text-gray-200 font-medium shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-500/50 hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base'>
+                View Projects
+              </button>
+            </NavLink>
+            <NavLink to="/contact">
+              <button className='px-6 sm:px-8 py-3 rounded-xl border border-gray-700 text-gray-300 font-medium hover:bg-gray-800 hover:text-white transition-all duration-300 text-sm sm:text-base'>
+                Contact Me
+              </button>
+            </NavLink>
+          </div>
 
-      {/* Right-side container */}
-    <div className='flex justify-center relative order-1 md:order-2 mb-6 md:mb-0'>
-      <div className='absolute left-4 sm:left-10 md:left-20 top-0 sm:top-5 md:top-10'>
-        <p className='text-xs sm:text-sm backdrop-blur-md px-2 py-1 rounded-lg border border-gray-700 text-gray-200 animate-slow-bounce'>Modern UI</p>
-      </div>
-      <div className='absolute right-4 sm:right-10 md:right-20 bottom-0 sm:bottom-5 md:bottom-10'>
-        <p className='text-xs sm:text-sm backdrop-blur-md px-2 py-1 rounded-lg border border-gray-700 text-gray-200 animate-slow-bounce'>Responsive</p>
-      </div>
-      <div className='w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 shadow-xl shadow-cyan-500/20 rounded-full bg-white/5 border border-cyan-400/20'>
-       <img className='w-full h-full rounded-full object-cover' src={myPic} alt="Divyanshu profile picture" />
-      </div>
-    </div>
-    </div>
+          {/* Social media icons */}
+          <div className='flex gap-4 mt-8 text-lg justify-center md:justify-start'>
+            <a href="https://wa.me/919720619887" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-green-400 hover:border-green-400/50 transition-all duration-300'>
+              <FaWhatsapp/>
+            </a>
+            <a href="https://instagram.com/divyanshu_chauhan_0" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300'>
+              <FaInstagram/>
+            </a>
+            <a href="https://linkedin.com/in/divyanshu-chauhan000" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300'>
+              <CiLinkedin/>
+            </a>
+            <a href="https://github.com/Divyanshu-chauhan000" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-white hover:border-white/50 transition-all duration-300'>
+              <FaGithub/>
+            </a>
+          </div>
+        </div>
 
+        {/* Right-side container */}
+        <div className='flex justify-center relative order-1 md:order-2'>
+          <div className='w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 p-1 shadow-2xl shadow-cyan-500/10'>
+            <img className='w-full h-full rounded-full object-cover' src={myPic} alt="Divyanshu profile" />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

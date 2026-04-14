@@ -75,140 +75,159 @@ const appProjects = [
 
 const Projects = () => {
   return (
-    //Section Wrapper
     <section
       id="projects"
       className="relative py-12 sm:py-16 md:py-24 bg-black"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Section ki heading ---> */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl pb-4 sm:text-4xl md:text-5xl bg-gradient-to-r from-cyan-500 to-blue-400 bg-clip-text text-transparent font-bold mb-3 sm:mb-4 leading-tight">
+        {/* Section Heading */}
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl pb-4 sm:text-4xl md:text-5xl bg-gradient-to-r from-cyan-500 to-blue-400 bg-clip-text text-transparent font-bold mb-4 leading-tight">
             Projects
           </h2>
-          <p className="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base px-4">
-           A collection of real-world projects demonstrating full-stack development, mobile app development, and scalable application architecture.
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
+            A collection of real-world projects demonstrating full-stack development, mobile app development, and scalable application architecture.
           </p>
         </div>
-        {/*Web Projects:---- */}
-        <div className="p-3">
-          <h2 className="bg-gradient-to-r from-cyan-500 to-blue-400 bg-clip-text text-transparent text-xl font-bold ">
+
+        {/* Web Projects */}
+        <div className="mb-10">
+          <h2 className="text-lg sm:text-xl font-semibold text-gray-300 mb-6 flex items-center gap-2">
+            <span className="w-8 h-[2px] bg-gradient-to-r from-cyan-500 to-blue-500"></span>
             Web Projects
           </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group flex flex-col h-full rounded-2xl bg-[#020617] border border-gray-500 shadow-lg hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-y-1 transition-all duration-300"
-            >
-              {/* project preview k liy  imaage lgani ha baad me  */}
-              <div className="h-36 sm:h-40 md:h-44 rounded-t-2xl w-full overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Project ka content: - */}
-              <div className="p-4 sm:p-5 md:p-6 flex flex-col h-full">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                {/* technology used are  */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
-                  {project.tech.map((items, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs px-2 sm:px-3 py-1 rounded-full bg-gray-100 text-gray-700"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="group flex flex-col rounded-2xl bg-[#020617] border border-gray-800 shadow-lg hover:border-cyan-500/50 hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              >
+                {/* Project Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-60"></div>
+                </div>
+
+                {/* Project Content */}
+                <div className="flex flex-col flex-1 p-5">
+                  <h3 className="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.tech.map((items, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700"
+                      >
+                        {items}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4 mt-auto">
+                    <a
+                      href={project.LiveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      {items}
-                    </span>
-                  ))}
-                </div>
-                {/* Links bhi to provide krni ha  */}
-                <div className="flex justify-between ">
+                      <span>Live Demo</span>
+                      <FiArrowUpRight className="text-base" />
+                    </a>
                     <a
-                    href={project.LiveDemo}
-                    className="mt-auto inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-cyan-500 hover:underline"
-                  >
-                    Live Demo{" "}
-                    <FiArrowUpRight className="text-base transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
-                  </a>
-                    <a
-                    href={project.Github}
-                    className="mt-auto inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-cyan-500 hover:underline"
-                  >
-                    GitHub{" "}
-                    <FiArrowUpRight className="text-base transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
-                  </a>
+                      href={project.Github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-400 hover:text-gray-200 transition-colors"
+                    >
+                      <span>GitHub</span>
+                      <FiArrowUpRight className="text-base" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        {/*App Projects:---- */}
-        <div className="p-3 mt-3">
-          <h2 className="bg-gradient-to-r from-cyan-500 to-blue-400 bg-clip-text text-transparent text-xl font-bold ">
+
+        {/* App Projects */}
+        <div className="mb-10">
+          <h2 className="text-lg sm:text-xl font-semibold text-gray-300 mb-6 flex items-center gap-2">
+            <span className="w-8 h-[2px] bg-gradient-to-r from-cyan-500 to-blue-500"></span>
             App Projects
           </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {appProjects.map((project, index) => (
-            <div
-              key={index}
-              className="group flex flex-col h-full rounded-2xl bg-[#020617] border border-gray-500 shadow-lg hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-y-1 transition-all duration-300"
-            >
-              {/* project preview k liy  imaage lgani ha baad me  */}
-              <div className="h-36 sm:h-40 md:h-44 rounded-t-2xl w-full overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Project ka content: - */}
-              <div className="p-4 sm:p-5 md:p-6 flex flex-col h-full">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                {/* technology used are  */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
-                  {project.tech.map((items, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs px-2 sm:px-3 py-1 rounded-full bg-gray-100 text-gray-700"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {appProjects.map((project, index) => (
+              <div
+                key={index}
+                className="group flex flex-col rounded-2xl bg-[#020617] border border-gray-800 shadow-lg hover:border-cyan-500/50 hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              >
+                {/* Project Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-60"></div>
+                </div>
+
+                {/* Project Content */}
+                <div className="flex flex-col flex-1 p-5">
+                  <h3 className="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.tech.map((items, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700"
+                      >
+                        {items}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4 mt-auto">
+                    <a
+                      href={project.APK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      {items}
-                    </span>
-                  ))}
-                </div>
-                {/* Links bhi to provide krni ha  */}
-                <div className="flex justify-between ">
+                      <span>Download APK</span>
+                      <FiArrowUpRight className="text-base" />
+                    </a>
                     <a
-                    href={project.APK}
-                    className="mt-auto inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-cyan-500 hover:underline"
-                  >
-                    Download APK{" "}
-                    <FiArrowUpRight className="text-base transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
-                  </a>
-                    <a
-                    href={project.Github}
-                    className="mt-auto inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-cyan-500 hover:underline"
-                  >
-                    GitHub{" "}
-                    <FiArrowUpRight className="text-base transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
-                  </a>
+                      href={project.Github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-400 hover:text-gray-200 transition-colors"
+                    >
+                      <span>GitHub</span>
+                      <FiArrowUpRight className="text-base" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

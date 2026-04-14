@@ -1,78 +1,82 @@
 import React from "react";
 import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
-import { useState } from "react";
+
+const footerLinks = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const Footer = () => {
-  const [link, setLink] = useState([
-    {
-      item: "Home",
-    },
-    {
-      item: "About",
-    },
-    {
-      item: "Skills",
-    },
-    {
-      item: "Projects",
-    },
-    {
-      item: "Contact",
-    },
-  ]);
+  const currentYear = new Date().getFullYear();
 
   return (
-    <section id="footer" className="bg-black border-t border-gray-800">
-      <div className="max-w-6xl mx-auto py-8 sm:py-10 px-4 sm:px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-        {/* Left section */}
-        <div className="text-gray-200 text-center md:text-left">
-          <a href="#">
-            <h1 className="text-lg sm:text-xl font-bold">Divyanshu</h1>
-          </a>
-          <p className="py-2 sm:py-4 text-sm sm:text-base">Crafting clean, scalable web experiences</p>
-        </div>
-        {/* Right section */}
-        <div className="flex flex-col sm:flex-row justify-center md:justify-around items-center gap-4 sm:gap-6">
-          {/* footer-links */}
+    <footer className="bg-black border-t border-gray-800">
+      <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Left - Brand */}
+          <div className="text-center md:text-left">
+            <a href="#home" className="text-xl font-bold text-gray-100 hover:text-cyan-400 transition-colors">
+              Divyanshu Chauhan
+            </a>
+            <p className="text-gray-500 text-sm mt-1">MERN Stack Developer</p>
+          </div>
 
-          <div className="text-white gap-3 sm:gap-4 flex flex-wrap justify-center text-sm sm:text-base">
-            {link.map((val, index) => (
-              <a href={`#${val.item.toLowerCase()}`} key={index} className="hover:text-cyan-400 transition">{val.item}</a>
+          {/* Center - Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            {footerLinks.map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                {link}
+              </a>
             ))}
           </div>
 
-          {/* footer social media links */}
-
-          <div className="flex gap-3 sm:gap-4 text-gray-200 text-lg sm:text-xl">
+          {/* Right - Social Links */}
+          <div className="flex gap-3">
             <a
-              href=""
-              className="hover:bg-green-400 rounded-full p-1 transition duration-300"
+              href="https://wa.me/919720619887"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-green-400 hover:border-green-400/50 transition-all duration-300"
             >
               <FaWhatsapp />
             </a>
             <a
-              href=""
-              className="hover:bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-full p-1 transition duration-300"
+              href="https://instagram.com/divyanshu_chauhan_0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300"
             >
               <FaInstagram />
             </a>
             <a
-              href=""
-              className="hover:bg-[#0a66c2] rounded-full p-1 transition duration-300"
+              href="https://linkedin.com/in/divyanshu-chauhan000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300"
             >
               <CiLinkedin />
             </a>
             <a
-              href=""
-              className="hover:bg-[#2b3137] rounded-full p-1 transition duration-300"
+              href="https://github.com/Divyanshu-chauhan000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-white hover:border-white/50 transition-all duration-300"
             >
               <FaGithub />
             </a>
           </div>
         </div>
+
+        {/* Bottom - Copyright */}
+        <div className="mt-8 pt-6 border-t border-gray-800 text-center">
+          <p className="text-gray-500 text-xs sm:text-sm">
+            © {currentYear} Divyanshu Chauhan. All rights reserved.
+          </p>
+        </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
