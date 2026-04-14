@@ -1,7 +1,6 @@
 import React from 'react'
 import myPic from '../assets/images/myPic.jpeg'
 import { NavLink } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
@@ -37,10 +36,10 @@ const Hero = () => {
 
           {/* Social media icons */}
           <div className='flex gap-4 mt-8 text-lg justify-center md:justify-start'>
-            <a href="https://wa.me/919720619887" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-green-400 hover:border-green-400/50 transition-all duration-300'>
+            {/* <a href="https://wa.me/919720619887" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-green-400 hover:border-green-400/50 transition-all duration-300'>
               <FaWhatsapp/>
-            </a>
-            <a href="https://instagram.com/divyanshu_chauhan_0" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300'>
+            </a> */}
+            <a href="https://www.instagram.com/chauhan_divyanshu_000_/" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300'>
               <FaInstagram/>
             </a>
             <a href="https://linkedin.com/in/divyanshu-chauhan000" target='_blank' rel='noopener noreferrer' className='w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300'>

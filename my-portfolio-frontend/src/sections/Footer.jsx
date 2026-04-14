@@ -34,16 +34,9 @@ const Footer = () => {
 
           {/* Right - Social Links */}
           <div className="flex gap-3">
+           
             <a
-              href="https://wa.me/919720619887"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-green-400 hover:border-green-400/50 transition-all duration-300"
-            >
-              <FaWhatsapp />
-            </a>
-            <a
-              href="https://instagram.com/divyanshu_chauhan_0"
+              href="https://www.instagram.com/chauhan_divyanshu_000_/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300"
@@ -51,7 +44,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com/in/divyanshu-chauhan000"
+              href="https://www.linkedin.com/in/divyanshu-chauhan-bb08a3291/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300"
